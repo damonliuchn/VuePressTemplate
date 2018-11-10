@@ -1,0 +1,17 @@
+{
+  "name": "VuePressTemplate",
+  "version": "1.0.0",
+  "description": "VuePressTemplate",
+  "scripts": {
+    "build": "vuepress build docs",
+    "dev": "vuepress dev docs",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "VuePressTemplate"
+  ],
+  "devDependencies": {
+    "vuepress": "^0.7.1",
+    "express": "^4.16.3"
+  }
+}
