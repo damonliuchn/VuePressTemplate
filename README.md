@@ -1,6 +1,6 @@
 # VuePressTemplate
 
-使用[VuePress](https://vuepress.vuejs.org/)搭建静态网站，可以做开源项目官方站点，并修改为绿色主题。
+使用[VuePress](https://vuepress.vuejs.org/)搭建静态网站，可以做开源项目官方站点，并修改为绿色主题。使用vuepress-theme-reco主题、vuepress-plugin-auto-sidebar插件
 
 <img src="https://raw.githubusercontent.com/MasonLiuChn/VuePressTemplate/master/readme.jpg" width="50%" height="50%" />
 
