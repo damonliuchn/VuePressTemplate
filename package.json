@@ -11,7 +11,8 @@
     "VuePressTemplate"
   ],
   "devDependencies": {
-    "vuepress": "^0.7.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "vuepress": "^1.5.3",
+    "vuepress-theme-reco": "^1.5.5"
   }
 }

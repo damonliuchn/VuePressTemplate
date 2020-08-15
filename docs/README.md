@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /heroImage.png
+heroImage: /logo.png
 actionText: About Me →
 actionLink: /about/
 features:
@@ -38,8 +38,8 @@ npm run serve
 
 1. 在docs及其子目录下编写md文件，一个md文件即一篇文章，文件夹下的README.md为改文件夹默认文章
 2. 侧边栏显示需要配置docs/.vuepress/config.js的sidebar
-3. 图片引用：图片放在docs/assets下，通过 `![logo](@alias/logo.png)` 来引入
-![logo](@alias/logo.png)
+3. 图片引用：图片放在docs/assets下，通过 `![demo](@alias/demo.png)` 来引入
+![demo](@alias/demo.png)
 ## 三、更多用法
 
 https://vuepress.vuejs.org/zh/guide/assets.html
