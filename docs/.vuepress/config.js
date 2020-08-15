@@ -1,37 +1,11 @@
-const fs = require('fs')
-const path = require('path')
-
-function getChildren(path) {
-  const root = []
-  readDirSync(path,root)
-  return root
-}
-
-function readDirSync(path,root){
-  var pa = fs.readdirSync(path);
-  pa.forEach(function(ele,index){
-    var info = fs.statSync(path+"/"+ele)
-    if(info.isDirectory()) {
-      readDirSync(path+ele,root)
-    } else {
-      if (checkFileType(ele)) {
-        root.push(prefixPath(path,ele))
-      }
-    }
-  })
-}
-
-function checkFileType(path) {
-  return path.includes(".md")
-}
-
-function prefixPath(basePath,dirPath) {
-  let index = basePath.indexOf("/")
-  basePath = basePath.slice(index,path.length)
-  return path.join(basePath,dirPath).replace(/\\/g,"/")
-}
-
 module.exports = {
+    plugins: {
+        "vuepress-plugin-auto-sidebar": {
+            titleMode: "titlecase", // 可选 `default`、`lowercase`、`uppercase`、`capitalize`、`camelcase`、`kebabcase`、`titlecase`
+            nav: true,
+            collapsable :true
+        }
+    },
     configureWebpack: {
         resolve: {
             alias: {
@@ -50,23 +24,22 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/logo.png',
-        sidebarDepth: 3,
         nav: [
             {text: 'Home', link: '/'},//这里是相对url path的路径（浏览器打开url时用）
             {text: 'Wiki', link: '/wiki/'},
             {text: 'About', link: '/about/'},
             {text: 'Github', link: 'https://github.com/vuejs/vuepress'},
         ],
-        sidebar: {
-            "/wiki/":[
-                {
-                    title: 'Wiki',
-                    collapsable: false,
-                    children: [
-                        '/wiki/first'
-                    ]
-                }
-            ],
-        },
+        // sidebar: {
+        //     "/wiki/":[
+        //         {
+        //             title: 'Wiki',
+        //             collapsable: false,
+        //             children: [
+        //                 '/wiki/first'
+        //             ]
+        //         }
+        //     ],
+        // },
     }
 }
